@@ -1,35 +1,36 @@
-body {
-    font: 1em sans-serif;
-    width: 100vw;
-    height: 100vh;
-}
+
 .stage {
     position: relative;
-    border-bottom: 3px solid #444;
-    display: flex;
-    height: 100%;
-    width: 100%;
+    width: 900px;
+    height: 900px;
+    margin: 0 auto;
+    background-color: burlywood;
+
 }
 .box {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
     background-color: #F44336;
-    height: 200px;
-    margin: 0 auto 0 auto;
-    transform-origin: bottom;
-    width: 200px;
+    height: 100px;
+    width: 100px;
+    animation: bounce2 8s infinite linear; 
 }
-.bounce-2 {
-    animation-name: bounce-2;
-    
-}
-@keyframes bounce-2 {
-    0%   {transform: translate(0,0);}
-    25%  {transform: translate(100px,0);}
-    50% { transform: translate(1600px,800px)}
-    75% { transform: translate(0,800px)}
-    100% { transform: translate(0 ,0)}
+@keyframes bounce2 {
+    0%{
+        top:30px; 
+        left: 30px;
+    }
+    25%{
+        top:30px;
+        left:calc(100% - 130px);}
+    50% { 
+        top:calc(100% - 130px);
+        left:calc(100% - 130px)
+    }
+    75% { 
+        top:calc(100% - 130px);
+        left:30px;
+    }
+    100% {top:30px;left:30px; }
 }
